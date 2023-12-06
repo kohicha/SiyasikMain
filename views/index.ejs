@@ -1,1 +1,11 @@
-imy
+<div class="grid grid-cols-3 grid-flow-row">
+    <%for(let i = 0; i < products.length; i++){%>
+        <div>
+            <p><%=products[i].productName%></p>
+            <p><%=products[i].productDescription%></p>
+            <p><%=products[i].productPrice%></p>
+            <p><%=products[i].productRating%></p>
+            <p><%=products[i].productBrand%></p>
+        </div>
+        <%}%>
+ </div>

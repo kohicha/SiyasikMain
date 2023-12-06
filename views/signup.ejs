@@ -1,0 +1,25 @@
+<div class="max-w-sm w-full flex flex-col gap-8">
+    <span>
+        <p class="font-bold text-5xl mb-2">Sign Up</p>
+        <p class="text-lg">Welcome!</p>
+    </span>
+    
+    <form action="/signup" method="POST">
+        <div class="flex flex-col gap-8">
+            <div class="flex flex-col gap-2">
+                <label for="displayName" class="font-bold">Username</label>
+                <input class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center" type="text" id="displayName" name="displayName" required placeholder="Enter your username">
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="email" class="font-bold">Email</label>
+                <input class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center" type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="password" class="font-bold">Password</label>
+                <input class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center" type="password" id="password" name="password" required placeholder="Enter your password">
+            </div>
+        <button type="submit" class="p-3 bg-slate-800 text-white font-semibold rounded-md">Sign Up</button>
+        </div>
+    </form>
+</div>
+
