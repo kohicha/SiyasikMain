@@ -40,29 +40,40 @@ router.post('/signup', async (req, res) => {
 });
 
 router.post('/login', async (req, res) => {
+  
   const { email, password } = req.body;
   try {
-      const { user, error } = await supabase.auth.signInWithPassword({
-          email,
-          password,
+      const { data, error } = await supabase.auth.signInWithPassword({
+          email: email,
+          password: password
       });
 
       if (error) {
           console.error(error);
           return res.status(500).json({ error: 'Internal Server Error' });
       }
+      
+      const { data: user, error: sessionError } = await supabase.auth.getSession()
+
+
+     
 
       // User is logged in
-      req.session.authenticated = true
+      req.authenticated = true
       req.session.user = user;
-      res.redirect('/dashboard')
+      if (req.session && req.session.user) {
+        return res.redirect('/dashboard')
+      }
+
   } catch (error) {
       console.error(error);
       res.status(500).json({ error: 'Internal Server Error' });
   }
 });
 
-router.get('/logout', (req, res) => {
+router.get('/logout', async (req, res) => {
+  
+    const { error } = await supabase.auth.signOut()
     req.session.destroy(error => {
       if(error) {
         console.log(error);

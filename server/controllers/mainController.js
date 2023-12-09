@@ -4,10 +4,10 @@ const supabase = require('../config/supabase');
 exports.homepage = async (req, res) => {
     try {
 
-      const{ data:products, error} = await supabase
+      const{ data: products, error} = await supabase
       .from('products')
       .select('*')
-      console.log(products)
+      //console.log(products)
 
       res.render('index', {
         products,

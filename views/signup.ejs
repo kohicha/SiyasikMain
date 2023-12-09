@@ -12,11 +12,18 @@
             </div>
             <div class="flex flex-col gap-2">
                 <label for="email" class="font-bold">Email</label>
-                <input class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center" type="email" id="email" name="email" required placeholder="Enter your email">
+                <input  onsubmit="isEmailValid()" class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center" type="email" id="email" name="email" required placeholder="Enter your email">
             </div>
             <div class="flex flex-col gap-2">
                 <label for="password" class="font-bold">Password</label>
-                <input class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center" type="password" id="password" name="password" required placeholder="Enter your password">
+                <input class="signup p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center" type="password" id="password" name="password" required placeholder="Enter your password">
+                <p class="font-bold text-sm text-red-700" id="errorMessage"></p>
+                <span  class="font-bold text-sm">
+                    <p>Password must contain at least:</p>
+                    <p>1 capitalized letter</p>
+                    <p>1 number</p>
+                </span>
+                
             </div>
         <button type="submit" class="p-3 bg-slate-800 text-white font-semibold rounded-md">Sign Up</button>
         </div>

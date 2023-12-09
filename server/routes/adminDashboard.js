@@ -2,14 +2,29 @@ const express = require('express');
 const router = express.Router();
 const adminController = require('../controllers/adminController');
 const supabase = require('../config/supabase');
+const {v4} = require('uuid')
+const multer = require('multer');
+const upload = multer();
 
 router.get('/admin', adminController.dashboard);
 
-router.post('/admin', async (req, res) => {
+router.post('/admin', upload.single('productImage'), async (req, res) => {
     const { productName, productPrice, productDescription, productRating, productBrand} = req.body;
-  
+    const productImageFile = req.file
+    const uuidv4 = v4()
     try {
-        const { data, error } = await supabase
+        const {data, error} = await supabase
+        .storage
+        .from('images')
+        .upload(`products/` + uuidv4, productImageFile.buffer ,{
+            contentType: "image/png, image/jpg, image/jpeg"
+        })
+
+        if(error){
+            console.log('Error!', error)
+        }
+
+        const { data:productData, error:productError } = await supabase
         .from('products')
         .insert(
             { 
@@ -17,12 +32,13 @@ router.post('/admin', async (req, res) => {
                 productPrice: productPrice,
                 productDescription: productDescription,
                 productRating: productRating, 
-                productBrand: productBrand
+                productBrand: productBrand,
+                productImageID: uuidv4
             }
         )
                 
-        if (error) {
-            throw error;
+        if (productError) {
+            console.log('Error! ', productError.message)
         }
 
         // Return the inserted data

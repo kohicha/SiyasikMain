@@ -2,7 +2,6 @@ const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const session = require('express-session')
 const app = express()
-const store = new session.MemoryStore();
 const supabase = require('./server/config/supabase')
 const path = require('path')
 require('dotenv').config();
@@ -11,7 +10,6 @@ app.use(session({
     secret: 'iloveducks',
     resave: false,
     saveUninitialized: true,
-    store
 }))
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
