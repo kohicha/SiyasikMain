@@ -40,9 +40,3 @@ app.get('*', function(req, res) {
     //res.status(404).send('404 Page Not Found.')
     res.status(404).render('404');
   })
-
-  app.use(async (req, res, next) => {
-    const { user, error } = await supabaseClient.auth.api.getUserByCookie(req);
-    req.session.user = user;
-    next();
-  });

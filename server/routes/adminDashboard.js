@@ -17,9 +17,7 @@ router.post('/admin', upload.single('productImage'), async (req, res) => {
         const {data, error} = await supabase
         .storage
         .from('images')
-        .upload(`products/` + uuidv4, productImageFile.buffer ,{
-            contentType: "image/png, image/jpg, image/jpeg"
-        })
+        .upload(`products/` + uuidv4, productImageFile.buffer)
 
         if(error){
             console.log('Error!', error)
