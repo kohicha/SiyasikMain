@@ -5,8 +5,9 @@ const supabase = require('../config/supabase');
 const {v4} = require('uuid')
 const multer = require('multer');
 const upload = multer();
+const {isLoggedIn} = require('../middleware/checkAuth')
 
-router.get('/admin', adminController.dashboard);
+router.get('/admin', isLoggedIn, adminController.dashboard);
 
 router.post('/admin', upload.single('productImage'), async (req, res) => {
     const { productName, productPrice, productDescription, productRating, productBrand} = req.body;
