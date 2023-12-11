@@ -31,6 +31,7 @@ app.use('/', require('./server/routes/index'))
 app.use('/', require('./server/routes/auth'))
 app.use('/', require('./server/routes/dashboard'))
 app.use('/', require('./server/routes/adminDashboard'))
+app.use('/', require('./server/routes/product'))
 //init port
 app.listen(port, () => {
     console.log(`App listening on port ${port}`)

@@ -1,13 +1,12 @@
-<div class="grid grid-cols-3 grid-flow-row">
+<div class="grid grid-cols-4 grid-flow-row gap-8 max-w-5xl">
     <%for(let i = 0; i < products.length; i++){%>
         <a href="product/<%=products[i].product_id%>" class="max-w-[16rem] flex flex-col gap-2 text-start bg-slate-50 rounded-2xl p-4">
             <div class="aspect-[5/4] w-auto max-w-[14rem] overflow-hidden relative">
                 <img src="https://vnumcewwzabqbcvnrccq.supabase.co/storage/v1/object/public/images/products/<%=products[i].productImageID%>" alt="" class="w-full object-cover h-full rounded-2xl">
             </div>
             <p class="font-bold"><%=products[i].productName%></p>
-            <p class="text-ellipsis whitespace-normal overflow-hidden line-clamp-2 "><%=products[i].productDescription%></p>
             <span class="flex flex-row justify-between items-center">
-                <p><%=products[i].productBrand%></p>
+                <p class="font-bold"><%=products[i].productBrand%></p>
                 <p class="font-bold text-xl">₱<%=products[i].productPrice%></p>
             </span>
         </a>
