@@ -6,7 +6,7 @@
         </div>
         <div class="flex flex-col gap-2">
             <label for="productPrice" class="font-bold">Product Price</label>
-            <input class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center" type="text" id="productPrice" name="productPrice" required placeholder="Enter your username">
+            <input oninput="validateNumericInput(event)" class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center" type="text" id="productPrice" name="productPrice" required placeholder="Enter your username">
         </div>
         <div class="flex flex-col gap-2">
             <label for="productDescription" class="font-bold">Product Description</label>
@@ -14,7 +14,7 @@
         </div>
         <div class="flex flex-col gap-2">
             <label for="productRating" class="font-bold">Product Rating</label>
-            <input class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center" type="text" id="productRating" name="productRating" required placeholder="Enter your username">
+            <input oninput="validateNumericInput(event)" class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center" type="text" id="productRating" name="productRating" required placeholder="Enter your username">
         </div>
         <div class="flex flex-col gap-2">
             <label for="productBrand" class="font-bold">Product Brand</label>
