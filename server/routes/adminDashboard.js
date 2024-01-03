@@ -9,7 +9,7 @@ const {isLoggedIn} = require('../middleware/checkAuth')
 
 router.get('/admin', isLoggedIn, adminController.dashboard);
 
-router.post('/admin', upload.single('productImage'), async (req, res) => {
+router.post('/admin', upload.single('productImage'), async (req, res, next) => {
     const { productName, productPrice, productDescription, productRating, productBrand} = req.body;
     const productImageFile = req.file
     const uuidv4 = v4()
@@ -40,10 +40,14 @@ router.post('/admin', upload.single('productImage'), async (req, res) => {
                 
         if (productError) {
             console.log('Error! ', productError.message)
+        }else{
+            const{ data: products, error} = await supabase
+            .from('products')
+            .select('*')
+            .eq('productImageID', uuidv4)
+            let product = products[0]
+            res.redirect(`product/${product.product_id}`)
         }
-
-        // Return the inserted data
-        res.send("successfully uploaded!")
     } catch (error) {
         console.error(error);
     }

@@ -7,6 +7,7 @@ exports.homepage = async (req, res) => {
       const{ data: products, error} = await supabase
       .from('products')
       .select('*')
+      .limit(8)
       //console.log(products)
 
       res.render('index', {

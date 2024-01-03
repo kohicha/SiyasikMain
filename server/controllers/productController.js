@@ -2,7 +2,6 @@ const supabase = require('../config/supabase');
 
 exports.viewProduct = async (req, res) => {
     try {
-
       const{ data: products, error} = await supabase
       .from('products')
       .select('*')

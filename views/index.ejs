@@ -1,14 +1,51 @@
-<div class="grid grid-cols-4 grid-flow-row gap-8 max-w-5xl">
-    <%for(let i = 0; i < products.length; i++){%>
-        <a href="product/<%=products[i].product_id%>" class="max-w-[16rem] flex flex-col gap-2 text-start bg-slate-50 rounded-2xl p-4">
-            <div class="aspect-[5/4] w-auto max-w-[14rem] overflow-hidden relative">
-                <img src="https://vnumcewwzabqbcvnrccq.supabase.co/storage/v1/object/public/images/products/<%=products[i].productImageID%>" alt="" class="w-full object-cover h-full rounded-2xl">
-            </div>
-            <p class="font-bold"><%=products[i].productName%></p>
-            <span class="flex flex-row justify-between items-center">
-                <p class="font-bold"><%=products[i].productBrand%></p>
-                <p class="font-bold text-xl">₱<%=products[i].productPrice%></p>
-            </span>
+
+
+
+
+<section id="catalog" class="w-full py-12">
+    <span class="text-center">
+        <p class="text-zinc-800 font-bold text-4xl">Browse Our Catalog</p>
+        <p class="text-faded-jade-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </span>
+    <div class="h-full flex flex-row items-center justify-center py-12 gap-4 text-center">
+        <a href="" class="aspect-[5/7] w-96">
+            <img src="https://vnumcewwzabqbcvnrccq.supabase.co/storage/v1/object/public/images/display/catalog_img_1.jpeg" class="object-cover rounded-lg w-full h-full" alt="">
+            <p class="text-2xl font-bold text-zinc-800 mt-8">Clothing</p>
         </a>
-        <%}%>
- </div>
+        <a href="" class="aspect-[5/7] w-96">
+            <img src="https://vnumcewwzabqbcvnrccq.supabase.co/storage/v1/object/public/images/display/catalog_img_2.jpg" class="object-cover rounded-lg w-full h-full" alt="">
+            <p class="text-2xl font-bold text-zinc-800 mt-8">Delicacies</p>
+        </a>
+        <a href="" class="aspect-[5/7] w-96">
+            <img src="https://vnumcewwzabqbcvnrccq.supabase.co/storage/v1/object/public/images/display/catalog_img_3.jpeg" class="object-cover rounded-lg w-full h-full" alt="">
+            <p class="text-2xl font-bold text-zinc-800 mt-8">Literatures</p>
+        </a>
+    </div>
+</section>
+
+
+
+<section id="browse" class="w-full py-12">
+    <div class="flex flex-col items-center justify-center">
+        <p class="text-4xl text-zinc-800 font-bold ">Our Products</p>
+        <div class="grid grid-cols-4 grid-flow-row items-center justify-center w-11/12 h-full py-12 gap-4">
+            <%for(let i = 0; i < products.length; i++){%>
+                <div class="flex flex-col items-center">
+                    <a href="product/<%=products[i].product_id%>" class=" aspect-[8/12] w-10/12 sm:w-full h-full flex flex-col text-start rounded-2xl p-4">
+                        <div class="relative h-full">
+                            <img src="https://vnumcewwzabqbcvnrccq.supabase.co/storage/v1/object/public/images/products/<%=products[i].productImageID%>" alt="" class="w-full object-cover h-full">
+                        </div>
+                        <span class=" bg-slate-100 p-4 w-full text-zinc-800 pb-8">
+                            <p class="font-bold text-xl"><%=products[i].productName%></p>
+                            <p class="text-zinc-600"><%=products[i].productBrand%></p>
+                            <p class="font-semibold">php<%=products[i].productPrice%></p>
+                        </span>
+                    </a>
+                </div>
+                
+                <%}%>
+         </div>
+         <a href="" class="border-faded-jade-500 border bg-rum-swizzle-50 text-faded-jade-500 font-bold w-64 text-center py-4 hover:bg-faded-jade-100 duration-300 transition-all ease-in-out">SHOW MORE</a>
+    </div>
+    
+</section>

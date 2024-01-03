@@ -4,6 +4,8 @@ exports.dashboard = async (req, res) => {
       description: "Free admin App.",
     }
     res.render('admin', {
+      showModal: false,
+      url: '',
       locals,
       layout: '../views/layouts/adminDashboard'
     });
