@@ -8,22 +8,25 @@
     <link rel="stylesheet" href="/css/output.css">
 </head>
 <body class="w-full">
-        <section class="w-full h-screen">
+        <section class="w-full h-screen bg-[url('https://vnumcewwzabqbcvnrccq.supabase.co/storage/v1/object/public/images/display/index_display.png')] bg-cover">
             <%-include('../components/header.ejs')%>
             <div class="absolute grid grid-flow-col grid-cols-2 items-center justify-center w-full h-full">
                 <span>&nbsp;</span>
-                <div class="relative col-span-2 flex flex-col bg-rum-swizzle-50 mr-auto w-10/12 px-10 pb-10 py-16 gap-12">
-                    <span class="flex flex-col gap-4">
-                        <p>Welcome!</p>
-                        <p class=" text-3xl 2xl:text-5xl font-bold text-faded-jade-500">Discover A Wide Variety of Filipino Products</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                    </span>
-                    <a href="" class="bg-faded-jade-500 hover:bg-faded-jade-700 transition-all duration-150 ease-in-outm w-full sm:w-2/5 text-center py-6">
-                        <p class="font-bold text-rum-swizzle-50 ">SHOP NOW</p>
-                    </a>
+                <div class="relative col-span-2 bg-rum-swizzle-50 mr-auto w-full max-w-2xl">
+                    <div class="p-8 flex flex-col">
+                        <div class="flex flex-col gap-4">
+                            <div>Welcome!</div>
+                            <div class="font-bold text-5xl text-faded-jade-500">Discover A Wide Variety of Filipino Products</div>
+                            <div class="mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+                            <a href="" class="bg-faded-jade-500 p-6 text-rum-swizzle-50 font-bold w-2/5 text-center">
+                                SHOP NOW
+                            </a>
+                        </div>
+                            
+                    </div>
                 </div>
             </div>
-            <img src="https://vnumcewwzabqbcvnrccq.supabase.co/storage/v1/object/public/images/display/index_display.png" alt="" class="w-full">
+           
         </section>
         
         <%-body%>
