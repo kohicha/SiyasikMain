@@ -27,7 +27,6 @@ app.set('layout', './layouts/main')
 app.set('view engine', 'ejs')
 
 //routing
-app.use('/', require('./server/routes/index'))
 app.use('/', require('./server/routes/auth'))
 app.use('/', require('./server/routes/dashboard'))
 app.use('/', require('./server/routes/adminDashboard'))

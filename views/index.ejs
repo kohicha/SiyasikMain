@@ -8,16 +8,16 @@
         <p class="text-faded-jade-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </span>
     <div class="h-full flex flex-row items-center justify-center py-12 gap-4 text-center">
-        <a href="" class="aspect-[5/7] w-96">
-            <img src="https://vnumcewwzabqbcvnrccq.supabase.co/storage/v1/object/public/images/display/catalog_img_1.jpeg" class="object-cover rounded-lg w-full h-full" alt="">
+        <a href="" class="aspect-[5/7] w-96 ">
+            <img src="https://vnumcewwzabqbcvnrccq.supabase.co/storage/v1/object/public/images/display/catalog_img_1.jpeg" class="hover:scale-[1.03] transition-all duration-300 ease-in-out object-cover rounded-lg w-full h-full" alt="">
             <p class="text-2xl font-bold text-zinc-800 mt-8">Clothing</p>
         </a>
-        <a href="" class="aspect-[5/7] w-96">
-            <img src="https://vnumcewwzabqbcvnrccq.supabase.co/storage/v1/object/public/images/display/catalog_img_2.jpg" class="object-cover rounded-lg w-full h-full" alt="">
+        <a href="" class="aspect-[5/7] w-96 ">
+            <img src="https://vnumcewwzabqbcvnrccq.supabase.co/storage/v1/object/public/images/display/catalog_img_2.jpg" class="hover:scale-[1.03] transition-all duration-300 ease-in-out object-cover rounded-lg w-full h-full" alt="">
             <p class="text-2xl font-bold text-zinc-800 mt-8">Delicacies</p>
         </a>
-        <a href="" class="aspect-[5/7] w-96">
-            <img src="https://vnumcewwzabqbcvnrccq.supabase.co/storage/v1/object/public/images/display/catalog_img_3.jpeg" class="object-cover rounded-lg w-full h-full" alt="">
+        <a href="" class="aspect-[5/7] w-96 ">
+            <img src="https://vnumcewwzabqbcvnrccq.supabase.co/storage/v1/object/public/images/display/catalog_img_3.jpeg" class="hover:scale-[1.03] transition-all duration-300 ease-in-out object-cover rounded-lg w-full h-full" alt="">
             <p class="text-2xl font-bold text-zinc-800 mt-8">Literatures</p>
         </a>
     </div>
@@ -25,21 +25,26 @@
 
 
 
-<section id="browse" class="w-full py-12">
-    <div class="flex flex-col items-center justify-center">
+<section id="browse" class="w-full max-w-7xl mx-auto py-12">
+    <div class="flex flex-col items-center justify-center gap-12">
         <p class="text-4xl text-zinc-800 font-bold ">Our Products</p>
-        <div class="grid grid-cols-4 grid-flow-row items-center justify-center w-11/12 h-full py-12 gap-4">
+        <div class="flex flex-row flex-wrap mx-auto w-full gap-4 justify-center">
             <%for(let i = 0; i < products.length; i++){%>
-                <div class="flex flex-col items-center">
-                    <a href="product/<%=products[i].product_id%>" class=" aspect-[8/12] w-10/12 sm:w-full h-full flex flex-col text-start rounded-2xl p-4">
-                        <div class="relative h-full">
-                            <img src="https://vnumcewwzabqbcvnrccq.supabase.co/storage/v1/object/public/images/products/<%=products[i].productImageID%>" alt="" class="w-full object-cover h-full">
+                <div class="max-w-64">
+                    <a href="product/<%=products[i].product_id%>" class="flex flex-col">
+                        
+                        <div class="flex flex-col bg-slate-100 text-zinc-800">
+                            <div class="flex relative w-64 aspect-[4/5]">
+                                <img src="https://vnumcewwzabqbcvnrccq.supabase.co/storage/v1/object/public/images/products/<%=products[i].productImageID%>" alt="" class="w-full object-cover h-full">
+                            </div>
+                            <div class="p-4">
+                                <div class="font-bold line-clamp-2 break-words max-h-14 min-h-14 text-ellipsis"><%=products[i].productName%></div>
+                                <div class="text-zinc-600"><%=products[i].productBrand%></div>
+                                <div class="font-semibold">php<%=products[i].productPrice%></div>
+                            </div>
+                            
+                            
                         </div>
-                        <span class=" bg-slate-100 p-4 w-full text-zinc-800 pb-8">
-                            <p class="font-bold text-xl"><%=products[i].productName%></p>
-                            <p class="text-zinc-600"><%=products[i].productBrand%></p>
-                            <p class="font-semibold">php<%=products[i].productPrice%></p>
-                        </span>
                     </a>
                 </div>
                 
