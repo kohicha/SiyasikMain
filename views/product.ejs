@@ -1,12 +1,20 @@
-<div class="grid grid-cols-4 grid-flow-row gap-8 max-w-5xl">
-            <div class="aspect-[5/4] w-auto max-w-[14rem] overflow-hidden relative">
+<section class="w-full">
+    <div class="grid grid-flow-col items-center w-full">
+        <div class="w-full mx-auto">
+            <div class="aspect-[6/7] w-96 overflow-hidden relative">
                 <img src="https://vnumcewwzabqbcvnrccq.supabase.co/storage/v1/object/public/images/products/<%=product.productImageID%>" alt="" class="w-full object-cover h-full rounded-2xl">
             </div>
-            <p class="font-bold"><%=product.productName%></p>
-            <p><%=product.productDescription%></p>
+        </div>
+        <div class="w-full">
+            <span>
+                <p class="font-bold"><%=product.productName%></p>
+                <p><%=product.productDescription%></p>
+            </span>
             <span class="flex flex-row justify-between items-center">
                 <p><%=product.productBrand%></p>
                 <p class="font-bold text-xl">₱<%=product.productPrice%></p>
             </span>
+        </div>
+    </div>
 
- </div>
+ </section>
