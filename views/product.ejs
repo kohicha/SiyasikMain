@@ -1,18 +1,41 @@
-<section class="w-full">
-    <div class="grid grid-flow-col items-center w-full">
-        <div class="w-full mx-auto">
-            <div class="aspect-[6/7] w-96 overflow-hidden relative">
+<section class="w-full my-auto">
+    <div class="grid grid-cols-2 items-center w-full">
+        <div class="place-self-end pr-12">
+            <div class="aspect-square w-full max-w-xl overflow-hidden relative">
                 <img src="https://vnumcewwzabqbcvnrccq.supabase.co/storage/v1/object/public/images/products/<%=product.productImageID%>" alt="" class="w-full object-cover h-full rounded-2xl">
             </div>
         </div>
-        <div class="w-full">
-            <span>
-                <p class="font-bold"><%=product.productName%></p>
-                <p><%=product.productDescription%></p>
-            </span>
-            <span class="flex flex-row justify-between items-center">
-                <p><%=product.productBrand%></p>
-                <p class="font-bold text-xl">₱<%=product.productPrice%></p>
+        <div class="flex flex-col justify-between w-full h-full max-w-3xl mx-auto">
+            <div class="flex flex-col w-full h-full gap-8">
+                <span>
+                    <p><%=product.productBrand%></p>
+                </span>
+                <span>
+                    <p class="font-bold text-5xl"><%=product.productName%></p>
+                </span>
+                <span class="flex flex-row">
+                    ⭐⭐⭐⭐⭐
+                </span>
+                <span>
+                    <p class="font-bold text-6xl">₱<%=product.productPrice%>.00</p>
+                </span>
+                <span>
+                    <p><%=product.productDescription%></p>
+                </span>
+            </div>
+            
+            <span class="flex flex-col gap-4 relative">
+                <div class="w-full flex flex-row items-center gap-4">
+                    <a href="" class="bg-faded-jade-500 text-rum-swizzle-50 font-bold px-6 py-5 rounded-lg w-full">
+                        👜 Add to Cart
+                    </a>
+                    <a href="" class="bg-rum-swizzle-50 text-faded-jade-500 px-6 py-3 rounded-lg font-bold text-3xl ">
+                        ♡
+                    </a>
+                </div>
+                <span>
+                    🚚 Free delivery for orders above ₱3000
+                </span>
             </span>
         </div>
     </div>
