@@ -7,10 +7,13 @@
     <meta name="description" content="">
     <link rel="stylesheet" href="/css/output.css">
 </head>
-<body class="w-full ">
-        <%-include('../components/header.ejs')%>
-        <div class="h-screen w-full flex justify-center items-center ">
-            <%-body%>
+<body class="w-full ">    
+        <div class="h-screen w-full">
+            <%-include('../components/header.ejs')%>
+            <div class="flex items-center justify-center h-5/6">
+              <%-body%>  
+            </div>
+              
         </div>
        <script src="/script/validatePassword.js"></script> 
 </body>
