@@ -10,7 +10,7 @@ const {isLoggedIn} = require('../middleware/checkAuth')
 router.get('/admin', isLoggedIn, adminController.dashboard);
 
 router.post('/admin', upload.single('productImage'), async (req, res, next) => {
-    const { productName, productPrice, productDescription, productRating, productBrand} = req.body;
+    const { productName, productPrice, productDescription, productRating, productBrand, productCatalog} = req.body;
     const productImageFile = req.file
     const uuidv4 = v4()
     try {
@@ -34,7 +34,8 @@ router.post('/admin', upload.single('productImage'), async (req, res, next) => {
                 productDescription: productDescription,
                 productRating: productRating, 
                 productBrand: productBrand,
-                productImageID: uuidv4
+                productImageID: uuidv4,
+                catalog: productCatalog
             }
         )
                 

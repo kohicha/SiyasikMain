@@ -7,8 +7,9 @@ exports.main = async (req, res) => {
     .select('*')
     .limit(16)
     //console.log(products)
-
+    let catalogParam = "Catalog"
     res.render('catalog', {
+      catalogParam,
       products,
       layout: '../views/layouts/catalog'
     });
@@ -25,10 +26,21 @@ exports.main = async (req, res) => {
       .select('*')
       .eq('catalog', req.params.id)
       .limit(16)
-       res.render('catalog',{
-        products,
-        layout:'../views/layouts/catalog'
-       })
+      
+      if(products.length === 0){
+        
+        res.render('404', {
+          layout:"../views/layouts/dashboard"
+        })
+      }else{
+        let catalogParam = products[0].catalog
+        res.render('catalog',{
+          products,
+          catalogParam,
+          layout:'../views/layouts/catalog'
+         })
+      }
+       
       
     } catch (error) {
       console.log(error)

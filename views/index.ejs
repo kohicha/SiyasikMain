@@ -31,7 +31,7 @@
         <div class="flex flex-row flex-wrap mx-auto w-full gap-4 justify-center">
             <%for(let i = 0; i < products.length; i++){%>
                 <div class="max-w-64">
-                    <a href="product/<%=products[i].product_id%>" class="flex flex-col">
+                    <a href="/product/<%=products[i].product_id%>" class="flex flex-col">
                         <div class="flex flex-col bg-slate-100 text-zinc-800 relative">
                             <div class="flex">
                                 <img src="https://vnumcewwzabqbcvnrccq.supabase.co/storage/v1/object/public/images/products/<%=products[i].productImageID%>" alt="" class=" w-64 aspect-[4.7/5] object-cover h-full"> 
@@ -46,7 +46,7 @@
                                     ">
                                         Add To Cart
                                     </a>
-                                    <a href="product/<%=products[i].product_id%>" class="bg-white border font-semibold text-sm text-faded-jade-500 text-center p-3 w-full max-w-48
+                                    <a href="/product/<%=products[i].product_id%>" class="bg-white border font-semibold text-sm text-faded-jade-500 text-center p-3 w-full max-w-48
                                     opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out
                                     ">
                                         View Product

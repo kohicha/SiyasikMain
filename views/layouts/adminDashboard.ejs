@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="/css/output.css">
 </head>
 <body class="w-full">
+    <div class="h-screen w-full">
         <%-include('../components/header.ejs')%>
-        <div class="grid place-items-center">
-            <%-body%>
+        <div class="flex items-center justify-center h-5/6">
+          <%-body%>  
         </div>
+          
+    </div>
         <script src="/script/validateNumbers.js"></script>
 </body>
 </html>

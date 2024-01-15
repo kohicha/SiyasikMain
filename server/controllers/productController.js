@@ -7,11 +7,24 @@ exports.viewProduct = async (req, res) => {
       .select('*')
       .eq('product_id', req.params.id)
       //console.log(products)
-      const product = products[0]
-       res.render('product',{
-        product,
-        layout:'../views/layouts/product'
-       })
+      
+      if(products){
+        const product = products[0]
+        res.render('product',{
+          product,
+          layout:'../views/layouts/product'
+         })
+        
+      } else if (products === null){
+        res.render('404',{
+          layout:'../views/layouts/dashboard'
+        })
+      } else {
+        res.render('404',{
+          layout:'../views/layouts/dashboard'
+        })
+      }
+      
       
     } catch (error) {
       console.log(error)

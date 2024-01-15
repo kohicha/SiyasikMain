@@ -54,10 +54,7 @@ router.post('/login', async (req, res) => {
       }
       
       const { data: user, error: sessionError } = await supabase.auth.getSession()
-
-
-     
-
+      
       // User is logged in
       req.authenticated = true
       req.session.user = user;
