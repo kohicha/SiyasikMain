@@ -15,6 +15,9 @@ module.exports = {
   ],
   
   theme: {
+    fontFamily: {
+      Satoshi: ["Satoshi"],
+    },
   extend: {
     colors:{
       'faded-jade': {

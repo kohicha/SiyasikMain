@@ -10,9 +10,10 @@ const {isLoggedIn} = require('../middleware/checkAuth')
 router.get('/admin', isLoggedIn, adminController.dashboard);
 
 router.post('/admin', upload.single('productImage'), async (req, res, next) => {
-    const { productName, productPrice, productDescription, productRating, productBrand, productCatalog, productOptions} = req.body;
+    let { productName, productPrice, productDescription, productRating, productBrand, productCatalog, productOptions} = req.body;
     const productImageFile = req.file
     const uuidv4 = v4()
+    productOptions = productOptions.filter(item => item !== "");
     try {
         const {data, error} = await supabase
         .storage

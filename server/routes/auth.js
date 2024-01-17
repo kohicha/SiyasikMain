@@ -32,7 +32,7 @@ router.post('/signup', async (req, res) => {
           return res.status(500).json({ error: 'Internal Server Error' });
       }
 
-      res.redirect('/confirm-signup')
+      res.redirect('/admin')
   } catch (error) {
       console.error(error);
       res.status(500).json({ error: 'Internal Server Error' });

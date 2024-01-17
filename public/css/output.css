@@ -710,6 +710,10 @@ video {
   width: 40%;
 }
 
+.w-28 {
+  width: 7rem;
+}
+
 .w-48 {
   width: 12rem;
 }
@@ -731,20 +735,12 @@ video {
   width: 100%;
 }
 
-.w-32 {
-  width: 8rem;
-}
-
-.w-24 {
-  width: 6rem;
-}
-
-.w-28 {
-  width: 7rem;
-}
-
 .min-w-\[42rem\] {
   min-width: 42rem;
+}
+
+.max-w-16 {
+  max-width: 4rem;
 }
 
 .max-w-2xl {
@@ -767,16 +763,12 @@ video {
   max-width: 80rem;
 }
 
-.max-w-sm {
-  max-width: 24rem;
-}
-
-.max-w-96 {
-  max-width: 24rem;
-}
-
 .max-w-lg {
   max-width: 32rem;
+}
+
+.max-w-sm {
+  max-width: 24rem;
 }
 
 .cursor-pointer {
@@ -955,11 +947,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-gray-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
-
 .bg-\[url\(\'https\:\/\/vnumcewwzabqbcvnrccq\.supabase\.co\/storage\/v1\/object\/public\/images\/display\/catalog_page\.jpg\?t\=2024-01-14T12\%3A06\%3A24\.773Z\'\)\] {
   background-image: url('https://vnumcewwzabqbcvnrccq.supabase.co/storage/v1/object/public/images/display/catalog_page.jpg?t=2024-01-14T12%3A06%3A24.773Z');
 }
@@ -1042,6 +1029,10 @@ video {
   text-align: center;
 }
 
+.font-Satoshi {
+  font-family: Satoshi;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1094,6 +1085,10 @@ video {
   font-weight: 600;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .capitalize {
   text-transform: capitalize;
 }
@@ -1110,6 +1105,11 @@ video {
 .text-faded-jade-700 {
   --tw-text-opacity: 1;
   color: rgb(49 84 78 / var(--tw-text-opacity));
+}
+
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
 .text-ironstone-800 {
@@ -1140,34 +1140,6 @@ video {
 .text-zinc-800 {
   --tw-text-opacity: 1;
   color: rgb(39 39 42 / var(--tw-text-opacity));
-}
-
-.text-gray-600 {
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
-}
-
-.text-gray-300 {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
-}
-
-.text-gray-400 {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
-}
-
-.text-gray-500 {
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-
-.text-opacity-60 {
-  --tw-text-opacity: 0.6;
-}
-
-.text-opacity-30 {
-  --tw-text-opacity: 0.3;
 }
 
 .underline {
@@ -1226,28 +1198,10 @@ video {
           appearance: textfield;
 }
 
-.checked\:border:checked {
-  border-width: 1px;
-}
+@font-face {
+  font-family: "Satoshi";
 
-.checked\:border-black:checked {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
-}
-
-.checked\:bg-black:checked {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.checked\:text-2xl:checked {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.checked\:\!text-2xl:checked {
-  font-size: 1.5rem !important;
-  line-height: 2rem !important;
+  src: url('./fonts/OTF/Satoshi-Regular.otf');
 }
 
 .hover\:scale-\[1\.03\]:hover {
@@ -1293,11 +1247,6 @@ video {
   opacity: 0.4;
 }
 
-.has-\[\:checked\]\:bg-black:has(:checked) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
 .has-\[\:checked\]\:bg-white:has(:checked) {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1308,21 +1257,10 @@ video {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.has-\[\:checked\]\:shadow-2xl:has(:checked) {
-  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .has-\[\:checked\]\:shadow-lg:has(:checked) {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.has-\[\:checked\]\:drop-shadow-2xl:has(:checked) {
-  --tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .\[\&\:\:-webkit-inner-spin-button\]\:appearance-none::-webkit-inner-spin-button {
