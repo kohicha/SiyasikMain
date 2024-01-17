@@ -1,61 +1,64 @@
 <form action="/admin" method="POST" enctype="multipart/form-data" class="max-w-5xl">   
-        <div class="flex flex-row flex-wrap gap-8">
-            <div class="flex flex-row flex-wrap gap-8">
-                <div class="flex flex-col gap-2">
-                    <label for="productName" class="font-bold">Product Name</label>
-                    <input class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center" type="text" id="productName" name="productName" required placeholder="Enter your username">
-                </div>
-                <div class="flex flex-col gap-2">
-                    <label for="productPrice" class="font-bold">Product Price</label>
-                    <input oninput="validateNumericInput(event)" class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center" type="text" id="productPrice" name="productPrice" required placeholder="Enter your username">
-                </div>
-               
-                <div class="flex flex-col gap-2">
-                    <label for="productRating" class="font-bold">Product Rating</label>
-                    <input oninput="validateNumericInput(event)" class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center" type="text" id="productRating" name="productRating" required placeholder="Enter your username">
-                </div>
-                <div class="flex flex-col gap-2">
-                    <label for="productBrand" class="font-bold">Product Brand</label>
-                    <input class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center" type="text" id="productBrand" name="productBrand" required placeholder="Enter your username">
-                </div>
-                <div class="flex flex-col gap-2">
-                    <label for="productImage" class="font-bold">Product Image</label>
-                    <input class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center" type="file" accept="image/png, image/jpeg, image/jpg" id="productImage" name="productImage" required placeholder="Enter your username">
-                </div>  
-            </div>
-            <div class="flex flex-col gap-2">
-                <label for="productDescription" class="font-bold">Product Description</label>
-                <textarea class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center resize-none" rows="8" cols="50" type="text" id="productDescription" name="productDescription" required placeholder="Enter your username"></textarea>
-            </div>
-           
-            <div class="flex flex-col justify-center relative h-full gap-1">
-                <p class="font-bold">
-                    Product Catalog
-                </p>
-                <div class="flex flex-col gap-2">
-                    <div>
-                        <input type="radio" name="productCatalog" required id="literature">
-                        <label for="literature">Literature</label>
+        <div class="flex flex-col  bg-white p-8 rounded-2xl drop-shadow-2xl gap-4">        
+            <div class="flex flex-row flex-wrap gap-8 border-b border-black pb-8">
+                <div class="flex flex-col flex-wrap gap-8">
+                    <div class="flex flex-col gap-2">
+                        <label for="productName" class="font-bold">Product Name</label>
+                        <input class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center" type="text" id="productName" name="productName" required placeholder="Enter your username">
                     </div>
-                    <div>
-                        <input type="radio" name="productCatalog" required id="games">
-                        <label for="games">Games</label>
+                    <div class="flex flex-col gap-2">
+                        <label for="productPrice" class="font-bold">Product Price</label>
+                        <input oninput="validateNumericInput(event)" class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center" type="text" id="productPrice" name="productPrice" required placeholder="Enter your username">
                     </div>
-                    <div>
-                        <input type="radio" name="productCatalog" required id="delicacies">
-                        <label for="delicacies">Delicacies</label>
+                
+                    <div class="flex flex-col gap-2">
+                        <label for="productRating" class="font-bold flex flex-row items-center gap-2">Product Rating <p class="text-sm opacity-40"> (Up to 5) </p></label>
+                        <input oninput="validateNumericInput(event)" class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center" type="text" id="productRating" name="productRating" required placeholder="Enter your username">
                     </div>
-                    <div>
-                        <input type="radio" name="productCatalog" required id="souvenirs">
-                        <label for="souvenirs">Souvenirs</label>
+                    <div class="flex flex-col gap-2">
+                        <label for="productBrand" class="font-bold">Product Brand</label>
+                        <input class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center" type="text" id="productBrand" name="productBrand" required placeholder="Enter your username">
                     </div>
-                    <div>
-                        <input type="radio" name="productCatalog" required id="clothing">
-                        <label for="clothing">Clothing</label>
+                    <div class="flex flex-col gap-2">
+                        <label for="productImage" class="font-bold">Product Image</label>
+                        <input class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center" type="file" accept="image/png, image/jpeg, image/jpg" id="productImage" name="productImage" required placeholder="Enter your username">
+                    </div>  
+                </div>
+                <div class="flex flex-col">
+                    <div class="flex flex-col gap-2">
+                        <label for="productDescription" class="font-bold">Product Description</label>
+                        <textarea class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center resize-none" rows="8" cols="50" type="text" id="productDescription" name="productDescription" required placeholder="Enter your username"></textarea>
+                    </div>
+                    <div class="flex flex-col justify-center relative h-full gap-1">
+                        <p class="font-bold">
+                            Product Catalog
+                        </p>
+                        <div class="flex flex-col gap-2">
+                            <div>
+                                <input type="radio" name="productCatalog" required id="literature">
+                                <label for="literature">Literature</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="productCatalog" required id="games">
+                                <label for="games">Games</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="productCatalog" required id="delicacies">
+                                <label for="delicacies">Delicacies</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="productCatalog" required id="souvenirs">
+                                <label for="souvenirs">Souvenirs</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="productCatalog" required id="clothing">
+                                <label for="clothing">Clothing</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
             </div>
+            <button type="submit" class="p-3 bg-slate-800 text-white font-semibold rounded-md">Upload!</button>
         </div>
-        <button type="submit" class="p-3 bg-slate-800 text-white font-semibold rounded-md">Upload!</button>
 </form>

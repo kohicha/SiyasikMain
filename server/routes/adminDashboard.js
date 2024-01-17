@@ -47,7 +47,8 @@ router.post('/admin', upload.single('productImage'), async (req, res, next) => {
             .select('*')
             .eq('productImageID', uuidv4)
             let product = products[0]
-            res.redirect(`product/${product.product_id}`)
+            //res.redirect(`product/${product.product_id}`)
+            res.redirect('back')
         }
     } catch (error) {
         console.error(error);

@@ -1,32 +1,35 @@
-<div class="flex flex-row bg-rum-swizzle-50 h-24 items-center px-24 mt-4">
-    <div class="border-r-2 border-black pr-4 mr-4 flex flex-row gap-4 items-center font-semibold ">
-        <a class="opacity-40" href="/">Home</a>
-        <a class="text-2xl font-bold"> > </a>
-        <a class="opacity-40" href="/catalog">Catalog</a>
-        <a class="text-2xl font-bold"> > </a>
-        <a class="opacity-40 capitalize" href="/catalog/<%=product.catalog%>" ><%=product.catalog%></a>
-    </div>
-    <a><%=product.productName%></a>
-</div>
-
-<div class="w-full relative flex flex-row justify-center max-w-5xl mx-auto gap-12 mt-8">
-    <div class="aspect-[4.5/5] h-full w-full max-w-sm min-w-[24rem]">
+<div class="container w-full relative flex flex-row justify-center mx-auto gap-12 mt-8">
+    <div class="aspect-square h-full w-full max-w-2xl min-w-[42rem]">
         <img src="https://vnumcewwzabqbcvnrccq.supabase.co/storage/v1/object/public/images/products/<%=product.productImageID%>" alt="" class="w-full object-cover h-full rounded-xl">
     </div>
-    <div class="flex flex-col gap-2 w-full justify-between">
-        <div class=" flex flex-col">
-            <p class="text-3xl font-semibold"><%=product.productName%></p>
-            <p class="text-xl font-semibold opacity-40 tracking-wide">₱<%=product.productPrice%>.00</p>
-            <p>⭐⭐⭐⭐⭐</p>
-            <div class="max-w-lg">
+    <div class="flex flex-col gap-6 w-full justify-center">
+        <div class=" flex flex-col gap-4">
+            <p class="text-3xl font-semibold text-faded-jade-700"><%=product.productName%></p>
+            <div class="opacity-80">
                 <p><%=product.productDescription%></p>
             </div>
+            <p class="text-2xl font-bold tracking-wide text-faded-jade-500">₱<%=product.productPrice%>.00</p>
         </div>
-        <div>
-            <div class="border-2 border-black rounded-lg w-fit font-semibold  text-2xl text-center p-4">
+        <div class="relative border w-fit p-3 rounded-full">
+            <button class=" rounded-full p-1 focus:outline-none focus:ring-0">
+              <span class="sr-only">Subtract</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M0 9h24v6h-24z"/></svg>
+            </button>
+          
+            <input type="number" class="bg-[#F2F2FF] [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none w-16 text-center text-xl focus:ring-0 font-bold focus:outline-none rounded-full text-faded-jade-500" value="1">
+          
+            <button class=" rounded-full p-1 focus:outline-none focus:ring-0">
+              <span class="sr-only">Add</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z"/></svg>
+            </button>
+          </div>
+        <div class="flex flex-row gap-4">
+            <div class="bg-faded-jade-500 rounded-lg w-48 font-semibold text-rum-swizzle-50 text-base text-center py-3">
+                <a href="">Buy Now</a>
+            </div>
+            <div class="bg-gray-300 rounded-lg w-48 font-semibold  text-base text-center py-3">
                 <a href="">Add To Cart</a>
             </div>
-            
         </div>
         
     </div>
