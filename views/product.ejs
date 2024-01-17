@@ -4,31 +4,40 @@
     </div>
     <div class="flex flex-col gap-6 w-full justify-center">
         <div class=" flex flex-col gap-4">
-            <p class="text-3xl font-semibold text-faded-jade-700"><%=product.productName%></p>
-            <div class="opacity-80">
+            <p class="text-3xl font-semibold text-faded-jade-700 capitalize"><%=product.productName%></p>
+            <div class="opacity-80 max-w-lg">
                 <p><%=product.productDescription%></p>
             </div>
             <p class="text-2xl font-bold tracking-wide text-faded-jade-500">₱<%=product.productPrice%>.00</p>
         </div>
+        <div class="flex flex-row flex-wrap gap-4">
+            <%for(let i = 0; i < product.productOptions.length; i++){%>   
+                
+                <label for="<%=product.productOptions[i]%>" class="cursor-pointer has-[:checked]:bg-white has-[:checked]:shadow-lg has-[:checked]:text-black font-semibold capitalize w-28 text-center p-3 rounded-2xl border text-gray-500">
+                    <input type="radio" name="option" id="<%=product.productOptions[i]%>" class="hidden" required>
+                    <%=product.productOptions[i]%>
+                </label>
+            <%}%>
+        </div>
         <div class="relative border w-fit p-3 rounded-full">
-            <button class=" rounded-full p-1 focus:outline-none focus:ring-0">
+            <button class="subtractInput rounded-full p-1 focus:outline-none focus:ring-0">
               <span class="sr-only">Subtract</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M0 9h24v6h-24z"/></svg>
             </button>
           
-            <input type="number" class="bg-[#F2F2FF] [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none w-16 text-center text-xl focus:ring-0 font-bold focus:outline-none rounded-full text-faded-jade-500" value="1">
+            <input type="number" class="numInput bg-[#F2F2FF] [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none w-16 text-center text-xl focus:ring-0 font-bold focus:outline-none rounded-full text-faded-jade-500" value="1">
           
-            <button class=" rounded-full p-1 focus:outline-none focus:ring-0">
+            <button class="addInput rounded-full p-1 focus:outline-none focus:ring-0">
               <span class="sr-only">Add</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z"/></svg>
             </button>
           </div>
         <div class="flex flex-row gap-4">
             <div class="bg-faded-jade-500 rounded-lg w-48 font-semibold text-rum-swizzle-50 text-base text-center py-3">
-                <a href="">Buy Now</a>
+                <a href="" >Buy Now</a>
             </div>
             <div class="bg-gray-300 rounded-lg w-48 font-semibold  text-base text-center py-3">
-                <a href="">Add To Cart</a>
+                <a href="" >Add To Cart</a>
             </div>
         </div>
         

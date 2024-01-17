@@ -29,35 +29,46 @@
                         <label for="productDescription" class="font-bold">Product Description</label>
                         <textarea class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center resize-none" rows="8" cols="50" type="text" id="productDescription" name="productDescription" required placeholder="Enter your username"></textarea>
                     </div>
-                    <div class="flex flex-col justify-center relative h-full gap-1">
-                        <p class="font-bold">
-                            Product Catalog
-                        </p>
-                        <div class="flex flex-col gap-2">
-                            <div>
-                                <input type="radio" name="productCatalog" required id="literature">
-                                <label for="literature">Literature</label>
+                    <div class="flex flex-row gap-12">
+                        <div class="flex flex-col justify-center h-full gap-1">
+                            <p class="font-bold">
+                                Product Catalog
+                            </p>
+                            <div class="flex flex-col gap-2">
+                                <div>
+                                    <input type="radio" name="productCatalog" required id="literature">
+                                    <label for="literature">Literature</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="productCatalog" required id="games">
+                                    <label for="games">Games</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="productCatalog" required id="delicacies">
+                                    <label for="delicacies">Delicacies</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="productCatalog" required id="souvenirs">
+                                    <label for="souvenirs">Souvenirs</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="productCatalog" required id="clothing">
+                                    <label for="clothing">Clothing</label>
+                                </div>
                             </div>
-                            <div>
-                                <input type="radio" name="productCatalog" required id="games">
-                                <label for="games">Games</label>
-                            </div>
-                            <div>
-                                <input type="radio" name="productCatalog" required id="delicacies">
-                                <label for="delicacies">Delicacies</label>
-                            </div>
-                            <div>
-                                <input type="radio" name="productCatalog" required id="souvenirs">
-                                <label for="souvenirs">Souvenirs</label>
-                            </div>
-                            <div>
-                                <input type="radio" name="productCatalog" required id="clothing">
-                                <label for="clothing">Clothing</label>
+                        </div>
+                        <div class="flex flex-col justify-center gap-1 h-full">
+                                <p class="font-bold mt-2">
+                                    Options
+                                </p>
+                            <div class="flex flex-col gap-4">
+                                <input class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center" type="text" name="productOptions[]" placeholder="Option 1">
+                                <input class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center" type="text" name="productOptions[]" placeholder="Option 2">
+                                <input class="p-2 border outline-none focus:border-black focus:border-2 border-slate-500 rounded-md border-opacity-60 flex items-center justify-center" type="text" name="productOptions[]" placeholder="Option 3">
                             </div>
                         </div>
                     </div>
                 </div>
-                
             </div>
             <button type="submit" class="p-3 bg-slate-800 text-white font-semibold rounded-md">Upload!</button>
         </div>

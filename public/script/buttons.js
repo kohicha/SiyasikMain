@@ -1,6 +1,6 @@
-const minusButton = document.querySelector('.relative button:first-of-type');
-const plusButton = document.querySelector('.relative button:last-of-type');
-const quantityInput = document.querySelector('.relative input');
+const minusButton = document.querySelector('.subtractInput');
+const plusButton = document.querySelector('.addInput');
+const quantityInput = document.querySelector('.numInput');
 
 minusButton.addEventListener('click', () => {
   let currentQuantity = parseInt(quantityInput.value);
