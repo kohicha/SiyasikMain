@@ -13,7 +13,7 @@
         <div class="flex flex-row flex-wrap gap-4">
             <%for(let i = 0; i < product.productOptions.length; i++){%>   
                 
-                <label for="<%=product.productOptions[i]%>" class="cursor-pointer has-[:checked]:bg-white has-[:checked]:shadow-lg has-[:checked]:text-black font-semibold capitalize w-28 text-center p-3 rounded-2xl border text-gray-500">
+                <label for="<%=product.productOptions[i]%>" class="cursor-pointer has-[:checked]:bg-white has-[:checked]:shadow-lg has-[:checked]:text-black font-semibold capitalize  text-center p-3 rounded-2xl border text-gray-500">
                     <input type="radio" name="option" id="<%=product.productOptions[i]%>" class="hidden" required>
                     <%=product.productOptions[i]%>
                 </label>

@@ -2,6 +2,7 @@ const supabase = require('../config/supabase');
 
 
 exports.homepage = async (req, res) => {
+    const header = req.session.user ? `seshHeader` : `header`
     try {
 
       const{ data: products, error} = await supabase
@@ -12,6 +13,7 @@ exports.homepage = async (req, res) => {
 
       res.render('index', {
         products,
+        header,
         layout: '../views/layouts/main'
       });
       
@@ -20,32 +22,27 @@ exports.homepage = async (req, res) => {
     }
     
   }
-exports.confirmSignup = async (req, res) => {
-  const locals = {
-    title: "Confirm Signup"
-  }
-  res.render('confirmAuth',{
-    locals,
-    layout:'../views/layouts/auth'
-  }) 
-}
 
 exports.signup = async (req, res) => {
+  const header = req.session.user ? `seshHeader` : `header`
   const locals = {
     title: "Sign up"
   }
   res.render('signup',{
     locals,
+    header,
     layout:'../views/layouts/auth'
   })
 }
 
 exports.login = async (req, res) => {
+  const header = req.session.user ? `seshHeader` : `header`
   const locals = {
     title: "Login"
   }
   res.render('login',{
     locals,
+    header,
     layout:'../views/layouts/auth'
   })
 }

@@ -10,7 +10,7 @@
 <body class="w-full font-Satoshi">
         
         <section class="w-full h-screen">
-            <%-include('../components/header.ejs')%>
+            <%-include(`../components/${header}.ejs`)%>
                 <div class="bg-[url('https://vnumcewwzabqbcvnrccq.supabase.co/storage/v1/object/public/images/display/catalog_page.jpg?t=2024-01-14T12%3A06%3A24.773Z')] bg-cover bg-no-repeat h-2/5 bg-[position:20] backdrop-blur-sm w-full flex flex-col items-center justify-center">
                     <span class="backdrop-blur-sm w-full h-full flex flex-col items-center justify-center text-5xl font-semibold gap-4">
                         <a class="capitalize"><%=catalogParam == undefined ? "Catalog" : catalogParam%></a>

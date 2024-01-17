@@ -1,6 +1,7 @@
 const supabase = require('../config/supabase');
 
 exports.main = async (req, res) => {
+  const header = req.session.user ? `seshHeader` : `header`
   try {
     const{ data: products, error} = await supabase
     .from('products')
@@ -11,7 +12,8 @@ exports.main = async (req, res) => {
     res.render('catalog', {
       catalogParam,
       products,
-      layout: '../views/layouts/catalog'
+      layout: '../views/layouts/catalog',
+      header
     });
     
   } catch (error) {
@@ -20,6 +22,7 @@ exports.main = async (req, res) => {
   }
 
   exports.catalog = async (req, res) => {
+    const header = req.session.user ? `seshHeader` : `header`
     try {
       const{ data: products, error} = await supabase
       .from('products')
@@ -35,6 +38,7 @@ exports.main = async (req, res) => {
       }else{
         let catalogParam = products[0].catalog
         res.render('catalog',{
+          header,
           products,
           catalogParam,
           layout:'../views/layouts/catalog'

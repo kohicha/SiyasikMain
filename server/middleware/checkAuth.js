@@ -5,3 +5,11 @@ exports.isLoggedIn = function (req, res, next) {
     return res.status(401).send('Access Denied');
   }
 }
+
+exports.isAuthenticated = function (req, res, next){
+  if(req.session.user){
+    next()
+  }else{
+    return false
+  }
+}

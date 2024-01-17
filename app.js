@@ -28,7 +28,6 @@ app.set('view engine', 'ejs')
 
 //routing
 app.use('/', require('./server/routes/auth'))
-app.use('/', require('./server/routes/dashboard'))
 app.use('/', require('./server/routes/adminDashboard'))
 app.use('/', require('./server/routes/product'))
 app.use('/', require('./server/routes/catalog'))

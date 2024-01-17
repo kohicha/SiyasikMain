@@ -3,10 +3,12 @@ exports.dashboard = async (req, res) => {
       title: "admin",
       description: "Free admin App.",
     }
+    const header = req.session.user ? `seshHeader` : `header`
     res.render('admin', {
       showModal: false,
       url: '',
       locals,
-      layout: '../views/layouts/adminDashboard'
+      layout: '../views/layouts/adminDashboard',
+      header
     });
   }

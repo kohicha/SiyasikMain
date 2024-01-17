@@ -8,7 +8,6 @@ const mainController = require('../controllers/mainController')
 router.get('/', mainController.homepage);
 router.get('/signup', mainController.signup)
 router.get('/login', mainController.login)
-router.get('/confirm-signup', mainController.confirmSignup)
 
 
 

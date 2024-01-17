@@ -1,6 +1,7 @@
 const supabase = require('../config/supabase');
 
 exports.viewProduct = async (req, res) => {
+  const header = req.session.user ? `seshHeader` : `header`
     try {
       const{ data: products, error} = await supabase
       .from('products')
@@ -11,16 +12,19 @@ exports.viewProduct = async (req, res) => {
       if(products){
         const product = products[0]
         res.render('product',{
+          header,
           product,
           layout:'../views/layouts/product'
          })
         
       } else if (products === null){
         res.render('404',{
+          header,
           layout:'../views/layouts/dashboard'
         })
       } else {
         res.render('404',{
+          header,
           layout:'../views/layouts/dashboard'
         })
       }
