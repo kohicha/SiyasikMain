@@ -20,12 +20,12 @@ exports.viewProduct = async (req, res) => {
       } else if (products === null){
         res.render('404',{
           header,
-          layout:'../views/layouts/dashboard'
+          layout:'../views/layouts/404'
         })
       } else {
         res.render('404',{
           header,
-          layout:'../views/layouts/dashboard'
+          layout:'../views/layouts/404'
         })
       }
       

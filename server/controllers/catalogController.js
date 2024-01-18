@@ -33,7 +33,8 @@ exports.main = async (req, res) => {
       if(products.length === 0){
         
         res.render('404', {
-          layout:"../views/layouts/dashboard"
+          layout:"../views/layouts/404",
+          header
         })
       }else{
         let catalogParam = products[0].catalog
