@@ -17,6 +17,8 @@ module.exports = {
   theme: {
     fontFamily: {
       Satoshi: ["Satoshi"],
+      SatoshiLight: ["SatoshiLight"],
+      SatoshiBold: ["SatoshiBold"],
     },
   extend: {
     colors:{
