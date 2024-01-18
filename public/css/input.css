@@ -16,3 +16,8 @@
     font-family: "SatoshiLight";
     src: url('./fonts/OTF/Satoshi-Light.otf');
 }
+
+@font-face {
+    font-family: "SatoshiBlack";
+    src: url('./fonts/OTF/Satoshi-Black.otf');
+}

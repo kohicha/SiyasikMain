@@ -22,16 +22,22 @@
                     </span>
                 </div>
             <%-body%>
-            <div class="w-full text-center p-4">
-                <% if (currentPage > 1) { %>
-                  <a href="/catalog/<%= currentPage - 1 %>">Previous</a>
-                <% } %>
+            <div class="w-full text-center p-4 flex flex-row justify-center gap-4">
+                <div>
+                    <% if (currentPage > 1) { %>
+                        <a href="/catalog/page/<%= currentPage - 1 %>">Previous</a>
+                      <% } %>
+                </div>
+                
             
                 <span>Page <%= currentPage %></span>
             
-                <% if (products.length === itemsPerPage) { %>
-                  <a href="/catalog/<%= currentPage + 1 %>">Next</a>
-                <% } %>
+                <div>
+                    <% if (products.length === itemsPerPage) { %>
+                        <a href="/catalog/page/<%= currentPage + 1 %>">Next</a>
+                      <% } %>
+                </div>
+                
               </div>
         </section>
         

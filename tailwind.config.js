@@ -19,6 +19,7 @@ module.exports = {
       Satoshi: ["Satoshi"],
       SatoshiLight: ["SatoshiLight"],
       SatoshiBold: ["SatoshiBold"],
+      SatoshiBlack: ["SatoshiBlack"],
     },
   extend: {
     colors:{

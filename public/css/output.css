@@ -639,6 +639,10 @@ video {
   margin-top: 2rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -755,6 +759,22 @@ video {
   max-width: 24rem;
 }
 
+.max-w-3xl {
+  max-width: 48rem;
+}
+
+.max-w-lg {
+  max-width: 32rem;
+}
+
+.max-w-6xl {
+  max-width: 72rem;
+}
+
+.max-w-full {
+  max-width: 100%;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -823,6 +843,10 @@ video {
   gap: 2rem;
 }
 
+.gap-32 {
+  gap: 8rem;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -857,6 +881,10 @@ video {
 
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
 }
 
 .border {
@@ -975,9 +1003,9 @@ video {
   padding: 2rem;
 }
 
-.px-16 {
-  padding-left: 4rem;
-  padding-right: 4rem;
+.px-32 {
+  padding-left: 8rem;
+  padding-right: 8rem;
 }
 
 .py-12 {
@@ -1004,12 +1032,20 @@ video {
   padding-bottom: 2rem;
 }
 
+.pr-32 {
+  padding-right: 8rem;
+}
+
 .text-center {
   text-align: center;
 }
 
 .font-Satoshi {
   font-family: Satoshi;
+}
+
+.font-SatoshiBlack {
+  font-family: SatoshiBlack;
 }
 
 .font-SatoshiBold {
@@ -1130,6 +1166,31 @@ video {
   color: rgb(39 39 42 / var(--tw-text-opacity));
 }
 
+.text-faded-jade-950 {
+  --tw-text-opacity: 1;
+  color: rgb(18 33 32 / var(--tw-text-opacity));
+}
+
+.text-faded-jade-800 {
+  --tw-text-opacity: 1;
+  color: rgb(42 69 65 / var(--tw-text-opacity));
+}
+
+.text-faded-jade-900 {
+  --tw-text-opacity: 1;
+  color: rgb(38 59 55 / var(--tw-text-opacity));
+}
+
+.text-faded-jade-300 {
+  --tw-text-opacity: 1;
+  color: rgb(140 188 176 / var(--tw-text-opacity));
+}
+
+.text-faded-jade-400 {
+  --tw-text-opacity: 1;
+  color: rgb(100 157 145 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -1146,6 +1207,18 @@ video {
   opacity: 0.8;
 }
 
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-sm {
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -1153,6 +1226,11 @@ video {
 
 .drop-shadow-2xl {
   --tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.drop-shadow-lg {
+  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -1202,6 +1280,12 @@ video {
   font-family: "SatoshiLight";
 
   src: url('./fonts/OTF/Satoshi-Light.otf');
+}
+
+@font-face {
+  font-family: "SatoshiBlack";
+
+  src: url('./fonts/OTF/Satoshi-Black.otf');
 }
 
 .hover\:scale-\[1\.03\]:hover {
