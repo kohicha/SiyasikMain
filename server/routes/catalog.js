@@ -4,6 +4,6 @@ const catalog = require('../controllers/catalogController');
 
 
 router.get('/catalog/page/:id', catalog.main)
-router.get('/catalog/:page', catalog.catalog)
+router.get('/catalog/:page/:id', catalog.catalog)
   
 module.exports = router;

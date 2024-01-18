@@ -28,6 +28,9 @@ exports.main = async (req, res) => {
 
   exports.catalog = async (req, res) => {
     const header = req.session.user ? `seshHeader` : `header`
+    const itemsPerPage = 12;
+    const currentPage = parseInt(req.params.id, 10) || 1;
+    const offset = (currentPage - 1) * itemsPerPage;
     let catalogParam = req.params.page
     try {
       const{ data: products, error} = await supabase
@@ -40,6 +43,8 @@ exports.main = async (req, res) => {
         products,
         layout: '../views/layouts/catalog',
         header,
+        currentPage,
+        itemsPerPage
       });
       
     } catch (error) {
