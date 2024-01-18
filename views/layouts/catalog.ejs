@@ -17,22 +17,12 @@
                         <span class="text-base font-normal">
                             <a href="/" class="font-bold">Home</a>
                             <a class="font-bold"> > </a>
-                            <a href="/catalog">Shop</a>
+                            <a href="/catalog/1">Shop</a>
                         </span>
                     </span>
                 </div>
             <%-body%>
-            <div class="w-full text-center p-4">
-                <% if (currentPage > 1) { %>
-                  <a href="/catalog/<%= currentPage - 1 %>">Previous</a>
-                <% } %>
-            
-                <span>Page <%= currentPage %></span>
-            
-                <% if (products.length === itemsPerPage) { %>
-                  <a href="/catalog/<%= currentPage + 1 %>">Next</a>
-                <% } %>
-              </div>
+        
         </section>
         
 </body>
