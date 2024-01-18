@@ -41,10 +41,11 @@ exports.main = async (req, res) => {
       res.render('catalog', {
         catalogParam,
         products,
-        layout: '../views/layouts/catalog',
+        layout: '../views/layouts/catalogs',
         header,
         currentPage,
-        itemsPerPage
+        itemsPerPage,
+        catalogParam
       });
       
     } catch (error) {
