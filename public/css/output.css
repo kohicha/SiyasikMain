@@ -590,6 +590,10 @@ video {
   border-width: 0;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -604,6 +608,14 @@ video {
 
 .top-full {
   top: 100%;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .z-10 {
@@ -641,6 +653,18 @@ video {
 
 .mb-4 {
   margin-bottom: 1rem;
+}
+
+.mb-96 {
+  margin-bottom: 24rem;
+}
+
+.mb-32 {
+  margin-bottom: 8rem;
+}
+
+.mb-24 {
+  margin-bottom: 6rem;
 }
 
 .line-clamp-2 {
@@ -692,6 +716,18 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-64 {
+  height: 16rem;
+}
+
+.h-96 {
+  height: 24rem;
+}
+
+.h-72 {
+  height: 18rem;
 }
 
 .max-h-14 {
@@ -783,6 +819,10 @@ video {
   resize: none;
 }
 
+.grid-flow-row {
+  grid-auto-flow: row;
+}
+
 .grid-flow-col {
   grid-auto-flow: column;
 }
@@ -815,6 +855,10 @@ video {
   justify-content: space-between;
 }
 
+.justify-around {
+  justify-content: space-around;
+}
+
 .gap-1 {
   gap: 0.25rem;
 }
@@ -845,6 +889,10 @@ video {
 
 .gap-32 {
   gap: 8rem;
+}
+
+.place-self-end {
+  place-self: end;
 }
 
 .overflow-hidden {
@@ -1026,6 +1074,16 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.py-24 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.py-52 {
+  padding-top: 13rem;
+  padding-bottom: 13rem;
 }
 
 .pb-8 {
@@ -1350,6 +1408,14 @@ video {
 @media not all and (min-width: 1536px) {
   .max-2xl\:min-w-\[2rem\] {
     min-width: 2rem;
+  }
+
+  .max-2xl\:min-w-\[8rem\] {
+    min-width: 8rem;
+  }
+
+  .max-2xl\:min-w-\[12rem\] {
+    min-width: 12rem;
   }
 }
 

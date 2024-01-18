@@ -57,7 +57,7 @@ router.post('/login', async (req, res) => {
       req.authenticated = true
       req.session.user = user;
       if (req.session && req.session.user) {
-        return res.redirect('/admin')
+        return res.redirect('/')
       }
 
   } catch (error) {

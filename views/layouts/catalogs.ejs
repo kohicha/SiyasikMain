@@ -9,9 +9,9 @@
 </head>
 <body class="w-full font-Satoshi">
         
-        <section class="w-full h-screen">
+        <section class="w-full h-screen grid grid-flow-row">
             <%-include(`../components/${header}.ejs`)%>
-                <div class="bg-[url('https://vnumcewwzabqbcvnrccq.supabase.co/storage/v1/object/public/images/display/catalog_page.jpg?t=2024-01-14T12%3A06%3A24.773Z')] bg-cover bg-no-repeat h-1/3 h- bg-[position:20] backdrop-blur-sm w-full flex flex-col items-center justify-center">
+                <div class="bg-[url('https://vnumcewwzabqbcvnrccq.supabase.co/storage/v1/object/public/images/display/catalog_page.jpg?t=2024-01-14T12%3A06%3A24.773Z')] bg-cover bg-no-repeat h-72 bg-[position:20] backdrop-blur-sm w-full flex flex-col items-center justify-center">
                     <span class="backdrop-blur-sm w-full h-full flex flex-col items-center justify-center text-5xl font-semibold gap-4 text-neutral-900">
                         <a class="capitalize"><%=catalogParam == undefined ? "Catalog" : catalogParam%></a>
                         <span class="text-base font-normal">
@@ -22,7 +22,7 @@
                     </span>
                 </div>
             <%-body%>
-            <div class="w-full text-center p-4 flex flex-row justify-center gap-4">
+            <div class="w-full text-center p-4 flex flex-row justify-center gap-4 mb-24">
                 <div>
                     <% if (currentPage > 1) { %>
                         <a href="/catalog/<%=catalogParam%>/<%= currentPage - 1 %>">Prev</a>
@@ -36,6 +36,7 @@
                 </div>
                 
               </div>
+              <%-include(`../components/footer.ejs`)%>
         </section>
         
 </body>
